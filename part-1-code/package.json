@@ -1,0 +1,35 @@
+{
+  "name": "mern-part1",
+  "version": "1.0.0",
+  "description": "The application from MERN-Tutorial Part 1",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/davidwestberry/MERN-tutorial.git"
+  },
+  "keywords": [
+    "MERN",
+    "MERN",
+    "stack",
+    "MERN",
+    "tutorial",
+    "React",
+    "Mongodb",
+    "Node.js",
+    "Node",
+    "Express"
+  ],
+  "author": "David Westberry",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/davidwestberry/MERN-tutorial/issues"
+  },
+  "homepage": "https://github.com/davidwestberry/MERN-tutorial#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
