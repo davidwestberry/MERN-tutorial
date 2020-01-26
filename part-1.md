@@ -115,7 +115,7 @@ Instead of using `node index.js` to start your application, you can define a sta
 and add a "start" script so that it looks like this
 ```json
 "scripts": {
-    "start": "node app.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   ```
