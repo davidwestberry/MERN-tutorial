@@ -85,7 +85,7 @@ app.get('/', function(req, res){
     res.send('Hello World');
 });
 ```
-The route definitions can also take additional parameters for [middleware](https://expressjs.com/en/guide/using-middleware.html) functions before the function that will execute when a request is made to that route. We will discuss middleware more in a future post.\
+>*Note: The route definitions can also take additional parameters for [middleware](https://expressjs.com/en/guide/using-middleware.html) >functions before the function that will execute when a request is made to that route. We will discuss middleware more in a future post.
 
 The last line tells our Express app to start running and listen for requests on port 3000. Like the `app.get()` method, the `app.listen()` method takes some parameters as well. The first parameter is the port to listen on, the second is a function that will execute once our Express app has started and is actively listening for requests. Again, I just used an anonymous function, and log to the console that the server is ready for requests.
 ```javascript
