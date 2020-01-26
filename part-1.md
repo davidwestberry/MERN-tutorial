@@ -62,3 +62,40 @@ app.listen(port, function() {
 Now if you run `node index.js` you should see output like `Example app listening on port 3000`. And if you open your browser and navigate to http://localhost:3000, you should see a blank page with **Hello World** at the top.
 
 ## Hello World Code Breakdown
+Here I will break down what is happening line by line
+Let Node.js know that we will be using the Express library. Node.js uses the CommonJS module system, so `require` is built in to core Node.js. If you would like to learn more about `require` in Node.js, there is a [great knowledge article](https://nodejs.org/en/knowledge/getting-started/what-is-require/) on the Node.js site.
+```javascript
+const express = require('express');
+```
+
+In CommonJS, modules are defined and expose functions using `module.exports`. The Express library exports a default function which creates an Express instance that we will use to set routes and start the server. So on the next line, I simply invoke that default funciton to create an Express application.
+```javascript
+const app = express();
+```
+
+I then define a variable to store the port number, this step is optional, I could have simply hard-coded the value `3000` in the `app.listen` function call.
+```javascript
+const port = 3000;
+```
+
+In an express application, a simple way to define routes is to use `app.get()` for a route that responds to 'GET' requests, `app.post` for a route that responds to 'POST' requests, etc. So on the next line I tell the Express application to listen for HTTP GET requests at the root URL ('/') or _**route**_. So this simple app will respond with 'Hello World' when you make a request to the root URL of the application, and it will respond with a **404** error if you request any other URL or route.
+The `app.get()` method requires at least 2 parameters, the first is the route or URL path to listen for requests on, the second is the function that will execute when a request is made to that route. In this example I used a simple Javascript anonymous function. The function that executes will have 2 parameters passed to it by the Express application framework: the [request object(`req`)](https://expressjs.com/en/4x/api.html#req) and the [response object(`res`)](https://expressjs.com/en/4x/api.html#res). The request object will have information from the HTTP request, including query parameters, headers passed with the request, and if this is a POST route, it will include any data sent in the body of the request.
+```javascript
+app.get('/', function(req, res){
+    res.send('Hello World');
+});
+```
+The route definitions can also take additional parameters for [middleware](https://expressjs.com/en/guide/using-middleware.html) functions before the function that will execute when a request is made to that route. We will discuss middleware more in a future post.
+
+The last line tells our Express app to start running and listen for requests on port 3000. Like the `app.get()` method, the `app.listen()` method takes some parameters as well. The first parameter is the port to listen on, the second is a function that will execute once our Express app has started and is actively listening for requests. Again, I just used an anonymous function, and log to the console that the server is ready for requests.
+```javascript
+app.listen(port, function() {
+    console.log(`Example app listening on port ${port}`);
+});
+```
+
+In order to keep this example simplistic for those who are familiar with JS but may not be up to date on the latest ES features, I used the older form of Javascript anonymous functions. You can also use a defined fuction (which we will do later) or, if you want to use an anonymous function, you can use the newer [Arrow Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) syntax for defining an anonymous function. I will be using this syntax for the remainder of these articles. Below is an example of the `app.get()` method call using Arrow Function syntax:
+```javascript
+app.get('/', (req, res) => {
+    res.send('Hello World');
+});
