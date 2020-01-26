@@ -79,7 +79,7 @@ const port = 3000;
 ```
 
 In an Express application, you can define basic routes by using app.METHOD(`PATH`, `HANDLER`)\
-Where\
+Where
 * **app** - is an instance of the express library
 * **METHOD** - is any valid HTTP Method ('GET', 'POST', 'PUT', 'DELETE') or all
 * **PATH** - is the path or route on the server (/, /user/profile, /login, etc)
