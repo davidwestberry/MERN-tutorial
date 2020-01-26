@@ -11,7 +11,9 @@ const port = 3000;
 
 // Define a method to respond to HTTP 'GET' requests made to the application's root level route
 app.get('/', function(req, res){
-    res.send('Hello World');
+    console.log(req.query);
+    let msg = req.query.msg || 'World';
+    res.send(`Hello ${msg}`);
 });
 
 // Tell your express app to listen on the desired port
