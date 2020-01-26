@@ -10,7 +10,7 @@ As mentioned above, Express is a web framework built for Node.js Your Express ap
 ## Getting Started
 To begin you will need to install Node.js and Express
 ### Install Node.js
-Install instructions for Node.js for your operating system can be found by visiting [the official Node.js site](http://nodejs.org)
+Install instructions for Node.js for your operating system can be found by visiting [the official Node.js site](http://nodejs.org)\
 Once you have Node.js installed, you can use the Node.js package manager **npm** to install Express. There are other package managers for Node.js, but npm is the offical package manager distributed with Node.js and is what I will be using throughout this tutorial.
 
 ### Install Express
@@ -62,7 +62,7 @@ app.listen(port, function() {
 Now if you run `node index.js` you should see output like `Example app listening on port 3000`. And if you open your browser and navigate to http://localhost:3000, you should see a blank page with **Hello World** at the top.
 
 ## Hello World Code Breakdown
-Here I will break down what is happening line by line
+Here I will break down what is happening line by line\
 Let Node.js know that we will be using the Express library. Node.js uses the CommonJS module system, so `require` is built in to core Node.js. If you would like to learn more about `require` in Node.js, there is a [great knowledge article](https://nodejs.org/en/knowledge/getting-started/what-is-require/) on the Node.js site.
 ```javascript
 const express = require('express');
@@ -85,7 +85,7 @@ app.get('/', function(req, res){
     res.send('Hello World');
 });
 ```
-The route definitions can also take additional parameters for [middleware](https://expressjs.com/en/guide/using-middleware.html) functions before the function that will execute when a request is made to that route. We will discuss middleware more in a future post.
+The route definitions can also take additional parameters for [middleware](https://expressjs.com/en/guide/using-middleware.html) functions before the function that will execute when a request is made to that route. We will discuss middleware more in a future post.\
 
 The last line tells our Express app to start running and listen for requests on port 3000. Like the `app.get()` method, the `app.listen()` method takes some parameters as well. The first parameter is the port to listen on, the second is a function that will execute once our Express app has started and is actively listening for requests. Again, I just used an anonymous function, and log to the console that the server is ready for requests.
 ```javascript
