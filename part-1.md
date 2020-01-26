@@ -84,7 +84,7 @@ Where\
 * **METHOD** - is any valid HTTP Method ('GET', 'POST', 'PUT', 'DELETE') or all
 * **PATH** - is the path or route on the server (/, /user/profile, /login, etc)
 * **HANDLER** - is a function that gets executed when requests are made to the specified route or path
-So here I used `app.get` to define a route that listens for 'GET' requests, and used a simple anonymous function as the _handler_
+So here I used `app.get` to define a route that listens for 'GET' requests, and used a simple anonymous function as the _handler_. For more information about routes you can check out the [Express docs](https://expressjs.com/en/guide/routing.html)
 ```javascript
 app.get('/', function(req, res){
     res.send('Hello World');
