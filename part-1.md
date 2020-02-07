@@ -1,4 +1,4 @@
-# MERN Tutorial - Part 1
+# MERN Tutorial - Part 1 Getting started with Express
 In part 1 of the MERN tutorial, I will provide a brief explaination of the MERN stack and each of the 4 technologies involved in building a MERN application. I will also walk through a very basic web application. This first web app will not use all 4 technologies, it is intended only to gain a rudimentary understanding of a Node.js application
 
 # M - E - R - N
